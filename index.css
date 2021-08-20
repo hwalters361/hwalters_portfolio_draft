@@ -1,0 +1,65 @@
+/* main page */
+* {
+	font-family: Tahoma, sans-serif;
+}
+
+html, body {
+    padding:0;
+    margin:0;
+}
+
+
+p{
+	font-size: 2vw;
+}
+h1, h2 {
+	font-size: 4vw;
+}
+
+/*mobile overlay*/
+
+#mobile_overlay{
+	visibility: hidden;
+	position: absolute;
+	width: max-width;
+	height: max-height;
+	background-color: powderblue;
+	overflow: hidden;
+
+	padding: 4vw;
+}
+
+/* navigation bar */
+.nav_bar{
+	border: 1px solid red;
+	overflow: hidden;
+	padding-right: 3em;
+}
+
+.nav_bar ul{
+	border: 1px solid blue;
+	overflow: hidden;
+}
+
+.nav_bar li{
+	border: 1px solid green;
+	font-size: 3vw;
+	margin-right: 2em;
+	float: right;
+	list-style-type: none;
+}
+
+.nav_bar li a {
+	color: red;
+	text-decoration: none;
+}
+
+/* in case of iPhone*/
+
+@media screen and (max-width: 600px) {
+	#mobile_overlay {
+		visibility: visible;
+	}
+	html, body {margin: 0; height: 100%; overflow: hidden}
+ }
+
