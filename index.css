@@ -57,8 +57,7 @@ h1, h2 {
 }
 
 /* in case of iPhone*/
-@media only screen 
-    and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
 	#mobile_overlay {
 		visibility: visible;
 	}
