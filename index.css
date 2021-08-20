@@ -17,6 +17,8 @@ h1, h2 {
 #mobile_overlay{
 	visibility: hidden;
 	
+	font-color: pink;
+
 	position: absolute;
 	left: 0px;
 	top: 0px;
