@@ -3,30 +3,32 @@
 	font-family: Tahoma, sans-serif;
 }
 
-html, body {
-    padding:0;
-    margin:0;
-}
-
+html, body {margin: 0; height: 100%; overflow: hidden;}
 
 p{
-	font-size: 2vw;
+	font-size: 1em;
 }
 h1, h2 {
-	font-size: 4vw;
+	font-size: 2em;
 }
 
 /*mobile overlay*/
 
 #mobile_overlay{
 	visibility: hidden;
+	
 	position: absolute;
-	width: max-width;
-	height: max-height;
-	background-color: powderblue;
-	overflow: hidden;
+	left: 0px;
+	top: 0px;
 
-	padding: 4vw;
+	height: 100%;
+	width: 100%;
+
+	background-color: powderblue;
+}
+
+#mobile_overlay h1, #mobile_overlay p{
+	margin: 10vw;
 }
 
 /* navigation bar */
@@ -55,11 +57,17 @@ h1, h2 {
 }
 
 /* in case of iPhone*/
-
-@media screen and (max-width: 600px) {
+@media only screen 
+    and (-webkit-device-pixel-ratio: 3) {
 	#mobile_overlay {
 		visibility: visible;
 	}
-	html, body {margin: 0; height: 100%; overflow: hidden}
+	p{
+		font-size: 3vw;
+	}
+	h1, h2 {
+		font-size: 4vw;
+	}
+
  }
 
