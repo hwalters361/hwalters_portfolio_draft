@@ -1,9 +1,15 @@
-/* main page */
+/* main page for Desktop*/
+
+/*Just a note that although there are media queries in this css, this is only for if the desktop window is resized*/
 * {
 	font-family: Tahoma, sans-serif;
 }
 
-html, body {margin: 0; height: 100%; overflow: hidden;}
+html, body {
+    padding:0;
+    margin:0;
+}
+html, body {margin: 0; height: 100%;}
 
 p{
 	font-size: 1em;
@@ -12,28 +18,21 @@ h1, h2 {
 	font-size: 2em;
 }
 
-/*mobile overlay*/
+/*circular logo*/
 
-#mobile_overlay{
-	visibility: hidden;
-	
-	font-color: pink;
-
-	position: absolute;
-	left: 0px;
-	top: 0px;
-
-	height: 100%;
-	width: 100%;
-
-	background-color: powderblue;
+#logo{
+	position: fixed;
+	top: 20px;
+	left: 20px;
 }
 
-#mobile_overlay h1, #mobile_overlay p{
-	margin: 10vw;
+#logo img{
+	height: 3em;
+	border-radius: 50%;
 }
 
 /* navigation bar */
+
 .nav_bar{
 	border: 1px solid red;
 	overflow: hidden;
@@ -43,11 +42,12 @@ h1, h2 {
 .nav_bar ul{
 	border: 1px solid blue;
 	overflow: hidden;
+	position: relative;
 }
 
 .nav_bar li{
 	border: 1px solid green;
-	font-size: 3vw;
+	font-size: 1em;
 	margin-right: 2em;
 	float: right;
 	list-style-type: none;
@@ -58,17 +58,90 @@ h1, h2 {
 	text-decoration: none;
 }
 
-/* in case of iPhone*/
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-	#mobile_overlay {
-		visibility: visible;
+/* main content */
+
+.main_content > *{
+	border: 1px solid green;
+}
+
+.main_content{
+	border: 1px solid yellow;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
+	padding: 5em 15em;
+
+}
+
+.half{
+	max-width: 40%;
+}
+
+@media only screen and (max-width: 1300px){
+	.main_content {
+		padding: 2em 7em;
 	}
-	p{
-		font-size: 3vw;
+}
+
+@media only screen and (max-width: 900px){
+	.half {
+		max-width: 100%;
 	}
-	h1, h2 {
-		font-size: 4vw;
+	.full{
+		max-width: 100%;
 	}
 
- }
+	.main_content{
+		padding:  10px;
+	}
 
+	#logo{
+		visibility: hidden;
+	}
+}
+
+/*collage*/
+
+.collage{
+	display: flex;
+	overflow: hidden;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	justify-content: space-evenly;
+
+	padding: 1em;
+
+}
+
+.collage img{
+	/* will want to change this depending on screen size, but I'm writing for desktop only right now*/
+	max-width: 30%;
+	max-height: 30vw;
+	align-self: center;
+	margin: 5px;
+}
+
+
+
+@media only screen and (max-width: 800px){
+	.collage img{
+		max-width: 40%;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.collage img{
+		max-width: 100%;
+		max-height: 50vw;
+	}
+}
+
+/* footer */
+
+.footer{
+	border: 1px solid green;
+}
