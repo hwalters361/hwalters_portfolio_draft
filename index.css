@@ -145,3 +145,48 @@ h1, h2 {
 .footer{
 	border: 1px solid green;
 }
+
+/*header with moving background depending on mouse!*/
+
+#header{
+	border: 20px solid whitesmoke;
+	/*put text in the horizontal middle*/
+	display: flex;
+	justify-content: center;
+	/*make edges of img hidden*/
+	overflow: hidden;
+	height: 60vw;
+}
+
+#header h1{
+	/*put text in the vertical middle*/
+	position: absolute;
+	align-self: center;
+
+	font-size: 5vw;
+	color: #fff;
+}
+
+#header img{
+	min-height: 100%;
+	max-width: 150%;
+	align-self: center;
+	width: auto;
+	height: auto;
+	position: relative;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
